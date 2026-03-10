@@ -1,18 +1,13 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export function Footer() {
   return (
     <footer className="bg-background border-t border-foreground/10 py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center justify-center gap-8">
         <div className="flex justify-center flex-col items-center gap-4">
-          <Image
-            src="/Vett_brand_with_logo.png"
-            alt="Vett Brand Logo"
-            width={100}
-            height={32}
-            className="object-contain dark:invert"
-          />
+          <span className="font-extrabold text-2xl tracking-tight text-primary bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-md">
+            Vett
+          </span>
           <p className="text-sm text-foreground/60 font-semibold tracking-wide">
             Trust is not Bought, Its Earned
           </p>
