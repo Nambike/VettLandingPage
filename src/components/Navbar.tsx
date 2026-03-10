@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
@@ -8,9 +9,14 @@ export function Navbar() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-x-2">
             <span className="sr-only">Vett</span>
-            <span className="font-extrabold text-2xl tracking-tight text-foreground bg-primary/10 text-primary dark:bg-primary/20 px-3 py-1 rounded-md">
-              Vett
-            </span>
+            <Image
+              src="/Vett_brand_with_logo.png"
+              alt="Vett Brand Logo"
+              width={120}
+              height={40}
+              className="object-contain dark:invert"
+              priority
+            />
           </Link>
         </div>
         <div className="flex gap-x-12">
