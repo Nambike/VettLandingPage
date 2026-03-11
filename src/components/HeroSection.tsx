@@ -1,6 +1,6 @@
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-background py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-background min-h-[100dvh] flex flex-col items-center justify-center pt-20 px-6">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
         <h1 className="text-6xl font-extrabold tracking-tight text-foreground sm:text-8xl">
           Vett

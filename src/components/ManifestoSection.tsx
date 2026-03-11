@@ -1,6 +1,6 @@
 export function ManifestoSection() {
   return (
-    <section id="manifesto" className="bg-primary py-24 sm:py-32">
+    <section id="manifesto" className="bg-primary min-h-[100dvh] flex flex-col items-center justify-center px-6 py-12">
       <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center text-primary-foreground">
         <h2 className="text-3xl font-bold tracking-tight sm:text-5xl mb-12">
           The Vett Trust Manifesto
