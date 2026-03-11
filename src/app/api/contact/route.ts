@@ -61,7 +61,7 @@ export async function POST(req: Request) {
              <!-- Header with Logo -->
              <div style="text-align: center; margin-bottom: 40px;">
                <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-                 <img src="${process.env.NEXT_PUBLIC_SITE_URL}/assets/NambikeJustLogo.png" 
+                 <img src="${process.env.NEXT_PUBLIC_SITE_URL}/assets/Vett_logo_only.png" 
                       alt="Vett Logo" 
                       style="width: 40px; height: 40px; border-radius: 50%; object-fit: contain; margin: 0 5px;" />
                  <h1 style="color: #ffffff; font-size: 28px; font-weight: 700; margin: 0;">Vett</h1>

@@ -21,7 +21,7 @@ export async function GET(req: Request) {
       <html>
       <head>
         <meta charset="utf-8">
-        <title>Invalid Token - Nambike</title>
+        <title>Invalid Token - Vett</title>
         <style>
           body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #0d1117; color: white; }
           .error { color: #ef4444; font-size: 24px; margin-bottom: 20px; }
@@ -54,7 +54,7 @@ export async function GET(req: Request) {
       <html>
       <head>
         <meta charset="utf-8">
-        <title>Verification Error - Nambike</title>
+        <title>Verification Error - Vett</title>
         <style>
           body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #0d1117; color: white; }
           .error { color: #ef4444; font-size: 24px; margin-bottom: 20px; }
@@ -75,7 +75,7 @@ export async function GET(req: Request) {
       <html>
       <head>
         <meta charset="utf-8">
-        <title>Invalid Token - Nambike</title>
+        <title>Invalid Token - Vett</title>
         <style>
           body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #0d1117; color: white; }
           .error { color: #ef4444; font-size: 24px; margin-bottom: 20px; }
@@ -104,7 +104,7 @@ export async function GET(req: Request) {
       <html>
       <head>
         <meta charset="utf-8">
-        <title>Verification Error - Nambike</title>
+        <title>Verification Error - Vett</title>
         <style>
           body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #0d1117; color: white; }
           .error { color: #ef4444; font-size: 24px; margin-bottom: 20px; }
@@ -156,7 +156,7 @@ export async function GET(req: Request) {
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Email Verified - Nambike</title>
+      <title>Email Verified - Vett</title>
       <style>
         body {
           font-family: 'Inter', Arial, sans-serif;
@@ -227,13 +227,13 @@ export async function GET(req: Request) {
     <body>
       <div class="container">
         <div class="logo">
-          <img src="${process.env.NEXT_PUBLIC_SITE_URL}/assets/NambikeJustLogo.png" alt="Nambike Logo" />
-          <h1>Nambike</h1>
+          <img src="${process.env.NEXT_PUBLIC_SITE_URL}/assets/Vett_logo_only.png" alt="Vett Logo" />
+          <h1>Vett</h1>
         </div>
         <div class="success-icon">✅</div>
         <h2>Email Successfully Verified!</h2>
         <p>Thank you for verifying your email address. We'll be in touch soon with updates about your submission.</p>
-        <a href="${process.env.NEXT_PUBLIC_SITE_URL}" class="button">Return to Nambike</a>
+        <a href="${process.env.NEXT_PUBLIC_SITE_URL}" class="button">Return to Vett</a>
       </div>
     </body>
     </html>
