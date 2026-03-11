@@ -14,11 +14,11 @@ export function HeroSection() {
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <button
             disabled
-            className="rounded-full bg-primary/20 px-8 py-4 text-lg font-semibold text-primary border-2 border-primary/30 shadow-sm cursor-not-allowed flex items-center gap-2 backdrop-blur-sm"
+            className="rounded-full bg-tertiary/20 px-8 py-4 text-lg font-semibold text-tertiary border-2 border-tertiary/30 shadow-sm cursor-not-allowed flex items-center gap-2 backdrop-blur-sm"
           >
             <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-tertiary"></span>
             </span>
             Coming Soon
           </button>

@@ -10,11 +10,12 @@ export default function ContactPage() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
-    
+
     const formData = new FormData(e.currentTarget);
     const data = {
       name: formData.get("name"),
       email: formData.get("email"),
+      gender: formData.get("gender"),
       message: formData.get("message"),
     };
 
@@ -47,7 +48,7 @@ export default function ContactPage() {
             <p className="text-lg leading-8 text-foreground/60 mb-8 text-center text-balance">
               Reach out to us to build meaningful relationships you can trust.
             </p>
-            
+
             {status === "success" ? (
               <div className="bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-200 p-6 rounded-xl text-center font-medium">
                 Thank you! Your message has been sent successfully. We will get back to you soon.
@@ -66,6 +67,40 @@ export default function ContactPage() {
                       required
                       className="block w-full rounded-md border-0 bg-transparent px-3.5 py-2 text-foreground shadow-sm ring-1 ring-inset ring-foreground/10 focus:ring-2 focus:ring-inset focus:ring-foreground sm:text-sm sm:leading-6 dark:bg-white/5"
                     />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="gender" className="block text-sm font-semibold leading-6 text-foreground">
+                    Gender
+                  </label>
+                  <div className="flex flex-row gap-8 items-center justify-around">
+                    <div className="mt-2 text-foreground/80 flex flex-row items-center gap-2">
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="gender"
+                        value="male"
+                      />
+                      <label htmlFor="gender">Male</label>
+                    </div>
+                    <div className="mt-2 text-foreground/80 flex flex-row items-center gap-2">
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="gender"
+                        value="female"
+                      />
+                      <label htmlFor="gender">Female</label>
+                    </div>
+                    <div className="mt-2 text-foreground/80 flex flex-row items-center gap-2">
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="gender"
+                        value="prefer_not_to_say"
+                      />
+                      <label htmlFor="gender">Prefer Not To Say</label>
+                    </div>
                   </div>
                 </div>
                 <div>
@@ -96,7 +131,7 @@ export default function ContactPage() {
                     />
                   </div>
                 </div>
-                
+
                 {status === "error" && (
                   <p className="text-sm text-red-600 dark:text-red-400">
                     There was an error sending your message. Please try again.

@@ -6,9 +6,9 @@ const resend = new Resend(process.env.RESEND_API_KEY || "re_dummy_fallback");
 
 export async function POST(req: Request) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, gender, message } = await req.json();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !gender || !message) {
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
@@ -17,14 +17,15 @@ export async function POST(req: Request) {
 
     const { data, error } = await resend.emails.send({
       from: "hello@joinvett.com", // Typically you'd use a verified domain here, e.g. contact@vett.app
-      to: ["hello@joinvett.com"], // Recipient team email (assuming hello@vett.app for now)
-      replyTo: email,
+      to: email, // Recipient team email (assuming hello@vett.app for now)
+      replyTo: "hello@joinvett.com",
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <div>
           <h2>New Message from Vett Landing Page</h2>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Gender:</strong> ${gender}</p>
           <p><strong>Message:</strong></p>
           <p>${message.replace(/\n/g, "<br/>")}</p>
         </div>

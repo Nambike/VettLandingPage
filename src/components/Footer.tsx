@@ -15,8 +15,8 @@ export function Footer() {
         <nav className="flex gap-x-8 text-sm leading-6 text-foreground/80 font-medium">
           <Link href="/#manifesto" className="hover:text-primary transition-colors">Manifesto</Link>
           <Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
-          <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
-          <Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link>
+          {/* <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
+          <Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link> */}
         </nav>
         <p className="text-xs leading-5 text-foreground/40 mt-8">
           &copy; {new Date().getFullYear()} Vett. All rights reserved.
