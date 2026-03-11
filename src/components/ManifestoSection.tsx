@@ -12,7 +12,7 @@ export function ManifestoSection() {
             We believe that trust should not be a question—it should be a verifiable constant."
           </p>
           <p>
-            "Whether its making real friends or finding your soulmate or building a career network, or just meeting new people or hosting meetups without the sketchiness"
+            "Whether its making real friends or finding your soulmate or just meeting new people without the sketchiness"
             <br /><b>Vett</b> provides the definitive registry where identity is absolute. <br />Real recognize real.
           </p>
           <p>
