@@ -2,11 +2,11 @@ export function ManifestoSection() {
   return (
     <section id="manifesto" className="bg-primary min-h-[100dvh] flex flex-col items-center justify-center px-6 py-12">
       <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center text-primary-foreground">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-5xl mb-12">
+        <h2 className="text-2xl font-bold tracking-tight sm:text-5xl mb-12">
           The Vett Trust Manifesto
         </h2>
 
-        <div className="space-y-8 text-xl sm:text-2xl leading-relaxed text-primary-foreground/90 font-medium font-serif italic text-balance">
+        <div className="space-y-8 text-lg sm:text-2xl leading-relaxed text-primary-foreground/90 font-medium font-serif italic text-balance">
           <p>
             "In a world where truth is easily obscured, Vett is the anchor.
             We believe that trust should not be a question—it should be a verifiable constant."
@@ -22,7 +22,7 @@ export function ManifestoSection() {
         </div>
 
         <div className="mt-16 pt-16 border-t border-primary-foreground/20">
-          <p className="text-2xl sm:text-4xl font-extrabold uppercase tracking-widest text-primary-foreground">
+          <p className="text-xl sm:text-4xl font-extrabold uppercase tracking-widest text-primary-foreground">
             <span className="text-primary-foreground/50">Because,</span> <br className="sm:hidden" />
             Trust is not Bought,<br />
             It's Earned.
