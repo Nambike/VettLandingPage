@@ -68,10 +68,10 @@ export async function POST(req: Request) {
 
              <!-- Main Content -->
              <div style="background-color: #1a1a1a; border-radius: 12px; padding: 40px; border: 1px solid #374151;">
-               <h2 style="color: #ffffff; font-size: 24px; font-weight: 600; margin: 0 0 20px 0;">Welcome to the Anchor of Truth, ${name || "there"}!</h2>
+                <h2 style="color: #ffffff; font-size: 24px; font-weight: 600; margin: 0 0 20px 0; text-align: center;">Welcome to the Anchor of Truth, ${name || "there"}!</h2>
                
                <p style="color: #d1d5db; font-size: 16px; line-height: 1.6; margin: 0 0 20px 0;">
-                 In a world where truth is easily obscured, Vett is the anchor. Whether you are looking for a **Friend, or a SoulMate, or forming personal bonds, or building professional connections or hosting exclusive events**, Vett provides the registry where identity is absolute.
+                 In a world where truth is easily obscured, Vett is the anchor. Whether you are looking for a <strong>Friend, or a SoulMate, or forming personal bonds, or building professional connections or hosting exclusive events</strong>, Vett provides the registry where identity is absolute.
                </p>
                
                <p style="color: #d1d5db; font-size: 16px; line-height: 1.6; margin: 0 0 30px 0;">
@@ -100,7 +100,7 @@ export async function POST(req: Request) {
                  Join the network where transparency is the baseline and trust is the currency.
                </p>
                <p style="color: #6b7280; font-size: 12px; margin: 0;">
-                 © 2025 Vett. All rights reserved.
+                 © 2026 Vett. All rights reserved.
                </p>
              </div>
            </div>

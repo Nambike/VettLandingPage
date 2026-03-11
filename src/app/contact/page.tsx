@@ -78,28 +78,28 @@ export default function ContactPage() {
                       <input
                         type="radio"
                         name="gender"
-                        id="gender"
+                        id="gender-male"
                         value="male"
                       />
-                      <label htmlFor="gender">Male</label>
+                      <label htmlFor="gender-male">Male</label>
                     </div>
                     <div className="mt-2 text-foreground/80 flex flex-row items-center gap-2">
                       <input
                         type="radio"
                         name="gender"
-                        id="gender"
+                        id="gender-female"
                         value="female"
                       />
-                      <label htmlFor="gender">Female</label>
+                      <label htmlFor="gender-female">Female</label>
                     </div>
                     <div className="mt-2 text-foreground/80 flex flex-row items-center gap-2">
                       <input
                         type="radio"
                         name="gender"
-                        id="gender"
+                        id="gender-other"
                         value="other"
                       />
-                      <label htmlFor="gender">Other</label>
+                      <label htmlFor="gender-other">Other</label>
                     </div>
                   </div>
                 </div>
