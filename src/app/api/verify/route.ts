@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY!);
 
 const supabase = createClient(
   process.env.SUPABASE_URL!,
@@ -88,7 +91,7 @@ export async function GET(req: Request) {
 
   // Debug: Log the update attempt
   console.log('Updating record with ID:', data.id);
-  
+
   const { error: updateError } = await supabase
     .from("submissions_verified")
     .update({ verified: true })
@@ -116,6 +119,35 @@ export async function GET(req: Request) {
   }
 
   console.log('Successfully updated verification status');
+
+  // Notify the team about the verified submission
+  try {
+    const { name, email, gender, message } = data;
+    await resend.emails.send({
+      from: "notifications@joinvett.com", // Use a verified domain
+      to: "hello@joinvett.com",
+      replyTo: email,
+      subject: `[VERIFIED] New Interest from ${name}`,
+      html: `
+        <div>
+          <h2>Verified Interest Submission</h2>
+          <p>A user has just verified their email address and confirmed their interest.</p>
+          <hr/>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Gender:</strong> ${gender}</p>
+          <p><strong>Message:</strong></p>
+          <p>${message ? message.replace(/\n/g, "<br/>") : "No message provided"}</p>
+          <hr/>
+          <p><em>This user is now marked as verified in the database.</em></p>
+        </div>
+      `,
+    });
+    console.log('Team notification email sent successfully');
+  } catch (notificationError) {
+    console.error('Failed to send team notification:', notificationError);
+    // Not returning error response here as user verification was successful
+  }
 
   // Return a proper HTML success page
   const html = `
@@ -207,7 +239,7 @@ export async function GET(req: Request) {
     </html>
   `;
 
-  return new NextResponse(html, { 
+  return new NextResponse(html, {
     status: 200,
     headers: {
       'Content-Type': 'text/html',

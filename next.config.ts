@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
     "react-native-paper",
     "react-native-safe-area-context",
     "react-native-vector-icons",
-    "@nambike/shared",
   ],
   webpack: (config) => {
     config.resolve.alias = {
