@@ -120,34 +120,34 @@ export async function GET(req: Request) {
 
   console.log('Successfully updated verification status');
 
-  // Notify the team about the verified submission
-  try {
-    const { name, email, gender, message } = data;
-    await resend.emails.send({
-      from: "notifications@joinvett.com", // Use a verified domain
-      to: "hello@joinvett.com",
-      replyTo: email,
-      subject: `[VERIFIED] New Interest from ${name}`,
-      html: `
-        <div>
-          <h2>Verified Interest Submission</h2>
-          <p>A user has just verified their email address and confirmed their interest.</p>
-          <hr/>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Gender:</strong> ${gender}</p>
-          <p><strong>Message:</strong></p>
-          <p>${message ? message.replace(/\n/g, "<br/>") : "No message provided"}</p>
-          <hr/>
-          <p><em>This user is now marked as verified in the database.</em></p>
-        </div>
-      `,
-    });
-    console.log('Team notification email sent successfully');
-  } catch (notificationError) {
-    console.error('Failed to send team notification:', notificationError);
-    // Not returning error response here as user verification was successful
-  }
+  // // Notify the team about the verified submission
+  // try {
+  //   const { name, email, gender, message } = data;
+  //   await resend.emails.send({
+  //     from: "notifications@joinvett.com", // Use a verified domain
+  //     to: "hello@joinvett.com",
+  //     replyTo: email,
+  //     subject: `[VERIFIED] Identity Absolute: ${name}`,
+  //     html: `
+  //       <div>
+  //         <h2>Circle of Trust: New Member Validated</h2>
+  //         <p>A user has just validated their identity and earned their place in the Vett registry.</p>
+  //         <hr/>
+  //         <p><strong>Name:</strong> ${name}</p>
+  //         <p><strong>Email:</strong> ${email}</p>
+  //         <p><strong>Gender:</strong> ${gender}</p>
+  //         <p><strong>Message:</strong></p>
+  //         <p>${message ? message.replace(/\n/g, "<br/>") : "No message provided"}</p>
+  //         <hr/>
+  //         <p><em>Transparency is the baseline. Trust is the currency.</em></p>
+  //       </div>
+  //     `,
+  //   });
+  //   console.log('Team notification email sent successfully');
+  // } catch (notificationError) {
+  //   console.error('Failed to send team notification:', notificationError);
+  //   // Not returning error response here as user verification was successful
+  // }
 
   // Return a proper HTML success page
   const html = `
@@ -227,12 +227,11 @@ export async function GET(req: Request) {
     <body>
       <div class="container">
         <div class="logo">
-          <img src="${process.env.NEXT_PUBLIC_SITE_URL}/assets/Vett_logo_only.png" alt="Vett Logo" />
           <h1>Vett</h1>
         </div>
         <div class="success-icon">✅</div>
-        <h2>Email Successfully Verified!</h2>
-        <p>Thank you for verifying your email address. We'll be in touch soon with updates about your submission.</p>
+        <h2>Identity Successfully Validated!</h2>
+        <p>Thank you for validating your connection to the Anchor of Truth. Trust is not Bought. It's Earned.</p>
         <a href="${process.env.NEXT_PUBLIC_SITE_URL}" class="button">Return to Vett</a>
       </div>
     </body>

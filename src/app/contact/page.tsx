@@ -73,7 +73,7 @@ export default function ContactPage() {
                   <label htmlFor="gender" className="block text-sm font-semibold leading-6 text-foreground">
                     Gender
                   </label>
-                  <div className="flex flex-row gap-8 items-center justify-around">
+                  <div className="flex flex-row items-center justify-between">
                     <div className="mt-2 text-foreground/80 flex flex-row items-center gap-2">
                       <input
                         type="radio"
@@ -97,9 +97,9 @@ export default function ContactPage() {
                         type="radio"
                         name="gender"
                         id="gender"
-                        value="prefer_not_to_say"
+                        value="other"
                       />
-                      <label htmlFor="gender">Prefer Not To Say</label>
+                      <label htmlFor="gender">Other</label>
                     </div>
                   </div>
                 </div>

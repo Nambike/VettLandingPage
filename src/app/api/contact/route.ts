@@ -47,50 +47,47 @@ export async function POST(req: Request) {
     const { data, error } = await resend.emails.send({
       from: "hello@joinvett.com",
       to: email,
-      subject: "Welcome to Vett - Please verify your email",
+      subject: "Vett: Validating your connection to the Circle of Trust",
       html: `
          <!DOCTYPE html>
          <html>
          <head>
            <meta charset="utf-8">
            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-           <title>Welcome to Vett</title>
+           <title>Vett Trust Verification</title>
          </head>
          <body style="margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif; background-color: #0d1117; color: #ffffff;">
            <div style="max-width: 600px; margin: 0 auto; background-color: #0d1117; padding: 40px 20px;">
-             <!-- Header with Logo -->
+             <!-- Header -->
              <div style="text-align: center; margin-bottom: 40px;">
                <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-                 <img src="${process.env.NEXT_PUBLIC_SITE_URL}/assets/Vett_logo_only.png" 
-                      alt="Vett Logo" 
-                      style="width: 40px; height: 40px; border-radius: 50%; object-fit: contain; margin: 0 5px;" />
                  <h1 style="color: #ffffff; font-size: 28px; font-weight: 700; margin: 0;">Vett</h1>
                </div>
-               <p style="color: #9ca3af; font-size: 16px; margin: 0;">Revolutionizing Business Solutions with Cutting-Edge Technology</p>
+               <p style="color: #9ca3af; font-size: 16px; margin: 0;">Where Identity is Absolute and Trust is Earned</p>
              </div>
 
              <!-- Main Content -->
              <div style="background-color: #1a1a1a; border-radius: 12px; padding: 40px; border: 1px solid #374151;">
-               <h2 style="color: #ffffff; font-size: 24px; font-weight: 600; margin: 0 0 20px 0;">Welcome ${name || "there"}!</h2>
+               <h2 style="color: #ffffff; font-size: 24px; font-weight: 600; margin: 0 0 20px 0;">Welcome to the Anchor of Truth, ${name || "there"}!</h2>
                
                <p style="color: #d1d5db; font-size: 16px; line-height: 1.6; margin: 0 0 20px 0;">
-                 Thank you for reaching out to Vett! We're excited to help you find meaningful relationship.
+                 In a world where truth is easily obscured, Vett is the anchor. Whether you are looking for a **Friend, or a SoulMate, or forming personal bonds, or building professional connections or hosting exclusive events**, Vett provides the registry where identity is absolute.
                </p>
                
                <p style="color: #d1d5db; font-size: 16px; line-height: 1.6; margin: 0 0 30px 0;">
-                 To complete your submission and ensure we can reach you, please verify your email address by clicking the button below:
+                 We do not just verify data; we validate the human behind it. To complete your entry into the network where transparency is the baseline, please verify your email address below:
                </p>
 
                <!-- CTA Button -->
                <div style="text-align: center; margin: 30px 0;">
                  <a href="${process.env.NEXT_PUBLIC_SITE_URL}/api/verify?token=${token}" 
                     style="display: inline-block; background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; text-decoration: none; padding: 16px 32px; border-radius: 8px; font-weight: 600; font-size: 16px; transition: all 0.2s ease;">
-                   Verify Email Address
+                   Validate My Identity
                  </a>
                </div>
 
                <p style="color: #9ca3af; font-size: 14px; line-height: 1.5; margin: 30px 0 0 0;">
-                 If the button doesn't work, you can also copy and paste this link into your browser:<br>
+                 Trust is not Bought. It's Earned.<br>
                  <a href="${process.env.NEXT_PUBLIC_SITE_URL}/api/verify?token=${token}" style="color: #3b82f6; word-break: break-all;">
                    ${process.env.NEXT_PUBLIC_SITE_URL}/api/verify?token=${token}
                  </a>
@@ -100,7 +97,7 @@ export async function POST(req: Request) {
              <!-- Footer -->
              <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #374151;">
                <p style="color: #9ca3af; font-size: 14px; margin: 0 0 10px 0;">
-                 This email was sent from Vett
+                 Join the network where transparency is the baseline and trust is the currency.
                </p>
                <p style="color: #6b7280; font-size: 12px; margin: 0;">
                  © 2025 Vett. All rights reserved.
