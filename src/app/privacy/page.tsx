@@ -43,10 +43,11 @@ export default function PrivacyPage() {
               <p>
                 Trust is at the core of what we do. We do not sell your personal information to third parties. We may share information only in the following circumstances:
               </p>
+              <strong>With your consent:</strong> When you choose to share your profile or connect with others.
               <ul className="list-disc pl-6 space-y-2 mt-4">
-                <li><strong>With your consent:</strong> When you choose to share your profile or connect with others.</li>
+                {/* <li><strong>With your consent:</strong> When you choose to share your profile or connect with others.</li> */}
                 {/* <li><strong>Service Providers:</strong> We may work with trusted partners to perform identity verification or host our services.</li> */}
-                <li><strong>Legal Requirements:</strong> If required by law or to protect the rights and safety of our users.</li>
+                {/* <li><strong>Legal Requirements:</strong> If required by law or to protect the rights and safety of our users.</li> */}
               </ul>
             </section>
 
