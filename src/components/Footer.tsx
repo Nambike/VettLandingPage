@@ -15,8 +15,8 @@ export function Footer() {
         <nav className="flex gap-x-8 text-sm leading-6 text-foreground/80 font-medium">
           <Link href="/#manifesto" className="hover:text-primary transition-colors">Manifesto</Link>
           <Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
-          {/* <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
-          <Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link> */}
+          <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+          {/* <Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link> */}
         </nav>
         <div className="flex gap-x-6">
           <a href="https://www.instagram.com/join.vett/" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors">
