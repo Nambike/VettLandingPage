@@ -1,7 +1,19 @@
+import Link from "next/link";
+
 export function ManifestoSection() {
   return (
-    <section id="manifesto" className="bg-primary min-h-[100dvh] flex flex-col items-center justify-center px-6 py-8 sm:py-12">
+    <section id="manifesto" className="relative bg-primary min-h-[100dvh] flex flex-col items-center justify-center px-6 py-8 sm:py-12">
+      <div className="absolute top-6 left-6 lg:left-8">
+        <Link href="#hero" className="-m-1.5 p-1.5 flex items-center gap-x-2">
+          <span className="sr-only">Vett</span>
+          <span className="font-extrabold text-2xl tracking-tight text-primary-foreground bg-primary-foreground/10 px-3 py-1 rounded-md border border-primary-foreground/20">
+            Vett
+          </span>
+        </Link>
+      </div>
+
       <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center text-primary-foreground">
+
         <h2 className="text-xl font-bold tracking-tight sm:text-5xl mb-6 sm:mb-12">
           The Vett Trust Manifesto
         </h2>
@@ -14,8 +26,8 @@ export function ManifestoSection() {
           <p>
             "Whether it's making real friends or finding your soulmate or just meeting new people without the sketchiness"
             <br />
-            <span className="not-italic mt-4 block text-lg sm:text-3xl font-bold">
-              <b>Vett</b> provides the definitive registry where identity is absolute. <br />Real recognize real.
+            <span className="not-italic mt-4 block text-lg sm:text-3xl">
+              <b>Vett</b> provides the definitive registry where identity is absolute. <br /><b>Real</b> Recognize <b>Real</b>.
             </span>
           </p>
           <p>
