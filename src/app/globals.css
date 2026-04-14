@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-container-high: #e9e8ea;
+  --color-surface-container-lowest: #ffffff;
+  --color-inverse-surface: #2f3032;
+  --color-on-error: #ffffff;
+  --color-secondary-fixed: #ffd7f3;
+  --color-secondary-container: #fdadec;
+  --color-on-tertiary-container: #d97788;
+  --color-inverse-primary: #dab9ff;
+  --color-on-secondary-container: #7b3b72;
+  --color-on-tertiary-fixed: #400013;
+  --color-on-surface: #1a1c1d;
+  --color-surface-variant: #e3e2e4;
+  --color-outline-variant: #cdc3d1;
+  --color-on-surface-variant: #4b4450;
+  --color-on-background: #1a1c1d;
+  --color-primary-fixed: #efdbff;
+  --color-on-tertiary: #ffffff;
+  --color-inverse-on-surface: #f1f0f2;
+  --color-on-primary-fixed: #2b0053;
+  --color-surface: #faf9fb;
+  --color-surface-container-low: #f4f3f5;
+  --color-surface-bright: #faf9fb;
+  --color-on-error-container: #93000a;
+  --color-on-tertiary-fixed-variant: #7a2c3d;
+  --color-secondary: #89477e;
+  --color-tertiary-fixed: #ffd9dd;
+  --color-primary-container: #3e1768;
+  --color-primary: #27004c;
+  --color-on-secondary: #ffffff;
+  --color-surface-tint: #724c9d;
+  --color-surface-dim: #dadadc;
+  --color-on-primary-container: #ab83d8;
+  --color-error: #ba1a1a;
+  --color-primary-fixed-dim: #dab9ff;
+  --color-on-secondary-fixed-variant: #6e2f65;
+  --color-surface-container-highest: #e3e2e4;
+  --color-background: #faf9fb;
+  --color-tertiary: #3a0011;
+  --color-error-container: #ffdad6;
+  --color-outline: #7c7481;
+  --color-secondary-fixed-dim: #fdadec;
+  --color-on-primary: #ffffff;
+  --color-tertiary-fixed-dim: #ffb2bd;
+  --color-surface-container: #eeedef;
+  --color-on-primary-fixed-variant: #593484;
+  --color-on-secondary-fixed: #390035;
+  --color-tertiary-container: #581124;
+  --color-manifesto-primary: #3E1768;
+  --color-manifesto-secondary: #67295F;
+  --color-manifesto-rosewood: #C96A7B;
+  --color-rosewood: #F4A3CC;
+  --color-background-light: #f7f6f8;
+  --color-background-dark: #191220;
+
+  --font-headline: var(--font-newsreader);
+  --font-body: var(--font-plus-jakarta-sans);
+  --font-label: var(--font-plus-jakarta-sans);
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container;
+  }
+}
+
+.hero-bg-deep {
+  background-color: #1a0033;
+  background-image: radial-gradient(circle at 20% 30%, rgba(114, 76, 157, 0.15) 0%, transparent 70%),
+                    radial-gradient(circle at 80% 70%, rgba(58, 0, 17, 0.2) 0%, transparent 70%);
+}
+
+.vett-gradient-bg {
+  background: linear-gradient(135deg, #27004c 0%, #3e1768 100%);
+}
+
+.editorial-shadow {
+  box-shadow: 0 12px 32px rgba(26, 0, 51, 0.12);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #1A0033 0%, #2D0052 100%);
+}
+
+.vett-score-card {
+  background: #ffffff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
